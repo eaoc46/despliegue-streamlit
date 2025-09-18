@@ -70,9 +70,9 @@ print(Y_pred_KNN)
 print(Y_pred_NN)
 
 data['Prediccion_TREE']=Y_pred_TREE
-data['Prediccion_RF]=Y_pred_RF
+data['Prediccion_RF']=Y_pred_RF
 data['Prediccion_KNN']=Y_pred_KNN
-data['Prediccion_NN=Y_pred_NN
+data['Prediccion_NN']=Y_pred_NN
 
 data.head()
 
