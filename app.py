@@ -51,29 +51,18 @@ data_preparada.head()
 data_preparada=data_preparada.reindex(columns=variables,fill_value=0)
 data_preparada.head()
 
-"""# **Predicciones**"""
-#Hacemos la predicción con el Tree
-Y_pred_TREE = model_Tree.predict(data_preparada)
-Y_pred_RF = model_rf.predict(data_preparada)
-
-print(Y_pred_TREE)
-print(Y_pred_RF)
-
 #Se normaliza la edad para predecir con Knn, Red
-data_preparada[['Edad']]= min_max_scaler.transform(data_preparada[['Edad']])
-data_preparada.head()
+#En los despliegues no se llama fit
+#data_preparada[['Edad']]= min_max_scaler.transform(data_preparada[['Edad']])
+#data_preparada.head()
 
-Y_pred_KNN = model_Knn.predict(data_preparada)
-Y_pred_NN = model_NN.predict(data_preparada)
+"""# **Predicciones**"""
 
-print(Y_pred_KNN)
-print(Y_pred_NN)
+#Hacemos la predicción con el Tree
+Y_pred = model_Tree.predict(data_preparada)
+print(Y_pred)
 
-data['Pred_TREE']=Y_pred_TREE
-data['Pred_RF']=Y_pred_RF
-data['Pred_KNN']=Y_pred_KNN
-data['Pred_NN']=Y_pred_NN
-
+data['Prediccion']=Y_pred
 data.head()
 
 #Predicciones finales
