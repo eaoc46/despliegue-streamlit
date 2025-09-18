@@ -69,10 +69,10 @@ Y_pred_NN = model_NN.predict(data_preparada)
 print(Y_pred_KNN)
 print(Y_pred_NN)
 
-data['Prediccion_TREE']=Y_pred_TREE
-data['Prediccion_RF']=Y_pred_RF
-data['Prediccion_KNN']=Y_pred_KNN
-data['Prediccion_NN']=Y_pred_NN
+data['Pred_TREE']=Y_pred_TREE
+data['Pred_RF']=Y_pred_RF
+data['Pred_KNN']=Y_pred_KNN
+data['Pred_NN']=Y_pred_NN
 
 data.head()
 
